@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Blank</title>
+    {% endif %}
+</head>
+<body>
+
+<h1>SciFi Movie List</h1>
+
+<div id="sciFiListContainer">
+
+        {% if movie_list %}
+        <ul>
+            {% for movie in movie_list %}
+            <li>{{movie}}</li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+    <h1>There are no scifi movies! :(</h1>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

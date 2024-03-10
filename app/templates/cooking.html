@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>There is no title</title>
+    {% endif %}
+</head>
+<body>
+
+    {% if cookbook %}
+        <ul>
+            {% for item in cookbook %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+    <h1>Nothing in the cookbook! :(</h1>
+    {% endif %}
+</body>
+</html>
